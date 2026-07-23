@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type ="text" id="txt" placeholder="Enter the number">
+    <button onclick ="but()">ok</button>
+    
+    <script>
+        function but(){
+        let randomnumber = Math.floor(Math.random()*100)+1;
+        let score = document.getElementById("txt").value;
+
+        let userscore =Number(score);
+        let difference = randomnumber - userscore;
+        let squareroot =Math.round(Math.sqrt(userscore));
+        let pi = Math.PI;
+        let multiplication ="50" * 2;
+        console.log("random number:",randomnumber);
+        console.log("user score:",userscore);
+        console.log("difference:",difference);
+        console.log("squareroot:",squareroot);
+        console.log("value of pi:",pi);
+        console.log("50 * 2:",multiplication);
+        }
+
+    </script>
+    
+</body>
+</html>

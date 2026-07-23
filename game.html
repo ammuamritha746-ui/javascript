@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter your score:</label>
+    <input type ="text" id="txt" placeholder>
+    <button onclick="result()">Generate</button>
+   
+    <script language ="javascript" type="text/javascript">
+        function result(){
+        let mysterylevel = Math.floor(Math.random()* 50)+ 1;
+        let score = document.getElementById("txt").value;
+        let userscore =Number(score);
+        let difference =Math.abs(mysterylevel - userscore);
+        let squareroot = Math.sqrt(userscore);
+        let pi =Math.PI;
+        let multiplication = "20" * 5;
+        let highest = Math.max(10,20,mysterylevel);
+        let lowest = Math.min(10,20,mysterylevel);
+        console.log("Mysterylevel:",mysterylevel);
+        console.log("user score:",userscore);
+        console.log("difference:",difference);
+         console.log("Square root:",squareroot);
+         console.log("value of pi:",pi);
+         console.log("20 * 5:",multiplication);
+          console.log("Highest value:",highest);
+           console.log("lowest value:",lowest);
+         
+
+
+    }
+
+
+    </script>
+
+    
+</body>
+</html>
