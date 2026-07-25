@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label id="txt" name="user">user:</label>
+    <input type="text" id="txt" name="user">
+    <label id="num" name ="age">age:</label>
+    <input type="number" id ="num" name="age">
+    <button onclick="btn()">ok</button>
+    <p id ="para"></p>
+    <script>
+        function btn(){
+            let user ={
+                name:"Amritha",
+                age:20,
+                admin : true
+            };
+
+          
+            let result =(user.age >=18 && user.name)?"Access Granted":"Access Denied";
+            document.getElementById("para").innerHTML = result;
+            let exist ="age" in user ;
+            console.log("age property exists:",exist);
+            delete user.age;
+            console.log(user);
+
+        }
+
+    </script>
+    
+</body>
+</html>
