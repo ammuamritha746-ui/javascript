@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students =[{name:"Amritha" , score:50},{name:"Adarsh",score: 40},{name:"Saran",score:95}]
+        students.forEach(function(student){
+            console.log(student.name);
+        })
+        let newarray = students.filter(myfunction);
+        function myfunction(value){
+            return value.score > 60;
+        }
+        console.log(newarray)
+        let sum = students.reduce(function(total,value){
+            return total + value.score;
+        },0);
+       
+        console.log(sum)
+        let check = students.every(function(mycheck){
+            return mycheck.score >=35;
+        });
+      
+        console.log("all are passes:",check);
+        let result= students.some(function(results){
+            return results.score > 90
+        });
+        console.log(result)
+        students.sort(function(a,b)
+    {
+        return b.score - a.score
+    });
+    students.forEach(function(sor)
+{
+    console.log(sor.name,sor.score)
+});
+    </script>
+    
+</body>
+</html>
