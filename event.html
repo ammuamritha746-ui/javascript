@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id ="date">
+    <button type ="text" onclick="hello()" >click</button>
+    <p id ="para"></p>
+    <script>
+        function hello(){
+            let username =document.getElementById("date").value
+            console.log(username)
+            let date = new Date(username);
+            let day = date.getDate()
+            let months =["january","febraury","march","april","may","june","july","august","september","october"]
+            let month = months[date.getMonth()]
+            let year = date.getFullYear()
+            let today = new Date();
+            let passed = today.getFullYear()-year;
+            let check =(passed > 1)? "It has been more than a year since that date." : "It has been less than a year since that date";
+        console.log(day);
+        console.log(month);
+        console.log(year);
+        console.log(passed);
+         document.getElementById("para").innerHTML= check;
+
+        }
+        
+    </script>
+    
+</body>
+</html>     
