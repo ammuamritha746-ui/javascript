@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    let i ;
+     for (i = 1; i<= 5 ; i++){
+        
+        let num = parseInt(prompt("enter a number(1 to 5):"));
+        if( num < 1 || num > 5){
+            console.log("Invalid input");
+            continue;
+        }
+        if(num == 3){
+            console.log("You guessed it right!");
+            break;
+            
+        }
+        else{
+            console.log("wrong guess. Try again" );
+            
+        }
+    
+        if(i == 5){
+            console.log("Game over");
+        }
+     }
+    
+        
+    </script>
+    
+</body>
+</html>
